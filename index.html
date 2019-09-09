@@ -1,1 +1,54 @@
-<p>Hello, world!</p>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			GhostHost
+		</title>
+		<script>
+
+			function open(file) {
+
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, false);
+
+				var allText = "";
+
+				rawFile.onreadystatechange = function() {
+
+					if(rawFile.readyState === 4) {
+
+						if(rawFile.status === 200 || rawFile.status == 0) {
+							allText = rawFile.responseText;
+						}
+					}
+				}
+
+				rawFile.send(null);
+
+				return allText;
+			}
+
+			function main() {
+
+				// url/?path=[link]
+
+				try {
+
+					document.documentElement.innerHTML =
+						open(location.href.substring(
+							location.href.indexOf("?") + 6));
+				}
+
+				catch(error) {
+					console.log(error.message);
+				}
+			}
+
+			main();
+
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
