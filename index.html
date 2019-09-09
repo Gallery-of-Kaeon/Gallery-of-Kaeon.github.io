@@ -23,6 +23,8 @@
 					}
 				}
 
+				xhr.setRequestHeader("Origin", '*');
+
 				rawFile.send(null);
 
 				return allText;
@@ -37,7 +39,7 @@
 					let uri =
 						"https://cors-anywhere.herokuapp.com/" +
 							open(location.href.substring(
-								location.href.indexOf("?") + 6))
+								location.href.indexOf("?") + 6));
 
 					document.documentElement.innerHTML = open(uri);
 				}
