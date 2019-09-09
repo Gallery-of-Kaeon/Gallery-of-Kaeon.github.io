@@ -19,7 +19,9 @@
 					open(location.href.substring(
 						location.href.indexOf("?") + 6));
 
-				$.get(uri, function(data) {
+				console.log(uri);
+
+				$.get(uri).done(function(data) {
 					console.log(data);
 				});
 			}
