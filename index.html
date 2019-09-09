@@ -32,15 +32,15 @@
 
 				// url/?path=[link]
 
+				let uri =
+					"https://crossorigin.me/" +
+						open(location.href.substring(
+							location.href.indexOf("?") + 6));
+
+				console.log(uri);
+
 				try {
-
-					let uri =
-						"https://crossorigin.me/" +
-							open(location.href.substring(
-								location.href.indexOf("?") + 6));
-
-					console.log(uri);
-					console.log(open(uri));
+					// console.log(open(uri));
 				}
 
 				catch(error) {
