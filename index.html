@@ -4,49 +4,62 @@
 		<title>
 			GhostHost
 		</title>
+		<script
+			src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			crossorigin="anonymous">
+		</script>
 		<script>
 
-			function open(file) {
+			// function open(file) {
 
-				var rawFile = new XMLHttpRequest();
-				rawFile.open("GET", file, false);
+			// 	var rawFile = new XMLHttpRequest();
+			// 	rawFile.open("GET", file, false);
 
-				var allText = "";
+			// 	var allText = "";
 
-				rawFile.onreadystatechange = function() {
+			// 	rawFile.onreadystatechange = function() {
 
-					if(rawFile.readyState === 4) {
+			// 		if(rawFile.readyState === 4) {
 
-						if(rawFile.status === 200 || rawFile.status == 0) {
-							allText = rawFile.responseText;
-						}
-					}
-				}
+			// 			if(rawFile.status === 200 || rawFile.status == 0) {
+			// 				allText = rawFile.responseText;
+			// 			}
+			// 		}
+			// 	}
 
-				xhr.setRequestHeader("Origin", '*');
+			// 	xhr.setRequestHeader("Origin", '*');
 
-				rawFile.send(null);
+			// 	rawFile.send(null);
 
-				return allText;
-			}
+			// 	return allText;
+			// }
 
 			function main() {
 
 				// url/?path=[link]
 
-				try {
+				// try {
 
-					let uri =
-						"https://cors-anywhere.herokuapp.com/" +
-							open(location.href.substring(
-								location.href.indexOf("?") + 6));
+				// 	let uri =
+				// 		"https://cors-anywhere.herokuapp.com/" +
+				// 			open(location.href.substring(
+				// 				location.href.indexOf("?") + 6));
 
-					document.documentElement.innerHTML = open(uri);
-				}
+				// 	document.documentElement.innerHTML = open(uri);
+				// }
 
-				catch(error) {
-					console.log(error.message);
-				}
+				// catch(error) {
+				// 	console.log(error.message);
+				// }
+
+				let uri =
+					open(location.href.substring(
+						location.href.indexOf("?") + 6));
+
+				$.get(uri, function(data) {
+					console.log(data);
+				});
 			}
 
 			main();
