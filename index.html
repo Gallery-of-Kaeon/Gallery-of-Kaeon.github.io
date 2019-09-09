@@ -19,10 +19,11 @@
 					open(location.href.substring(
 						location.href.indexOf("?") + 6));
 
-				console.log(uri);
-
-				$.get(uri).done(function(data) {
-					console.log(data);
+				fetch(uri)
+					.then(function(response) {
+						response.text().then(function(text) {
+							console.log(text);
+					});
 				});
 			}
 
