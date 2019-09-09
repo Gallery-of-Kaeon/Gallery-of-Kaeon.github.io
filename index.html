@@ -4,27 +4,48 @@
 		<title>
 			GhostHost
 		</title>
-		<script
-			src="https://code.jquery.com/jquery-3.4.1.min.js"
-			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-			crossorigin="anonymous">
-		</script>
 		<script>
+
+			function open(file) {
+
+				var rawFile = new XMLHttpRequest();
+				rawFile.open("GET", file, false);
+
+				var allText = "";
+
+				rawFile.onreadystatechange = function() {
+
+					if(rawFile.readyState === 4) {
+
+						if(rawFile.status === 200 || rawFile.status == 0) {
+							allText = rawFile.responseText;
+						}
+					}
+				}
+
+				rawFile.send(null);
+
+				return allText;
+			}
 
 			function main() {
 
 				// url/?path=[link]
 
-				let uri = "https://crossorigin.me/" +
-					open(location.href.substring(
-						location.href.indexOf("?") + 6));
+				try {
 
-				fetch(uri)
-					.then(function(response) {
-						response.text().then(function(text) {
-							console.log(text);
-					});
-				});
+					let uri =
+						"https://cors-anywhere.herokuapp.com/" +
+							open(location.href.substring(
+								location.href.indexOf("?") + 6));
+
+					console.log(uri);
+					console.log(open(uri));
+				}
+
+				catch(error) {
+					console.log(error.message);
+				}
 			}
 
 			main();
