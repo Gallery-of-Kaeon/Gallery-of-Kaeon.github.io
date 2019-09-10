@@ -23,7 +23,10 @@
 				};
 
 				if (/^POST/i.test(options.method)) {
-					x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+					x.setRequestHeader(
+						'Content-Type',
+						'application/x-www-form-urlencoded');
 				}
 
 				x.send(options.data);
@@ -33,10 +36,7 @@
 
 				// url/?path=[link]
 
-				let uri =
-					"https://crossorigin.me/" +
-						location.href.substring(
-							location.href.indexOf("?") + 6);
+				let uri = location.href.substring(location.href.indexOf("?") + 6);
 
 				console.log(uri);
 
