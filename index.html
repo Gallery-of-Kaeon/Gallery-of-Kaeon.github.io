@@ -21,6 +21,7 @@
 				var x = new XMLHttpRequest();
 
 				x.open(options.method, cors_api_url + options.url);
+				
 				x.onload = x.onerror = function() {
 						
 					printResult(
@@ -53,22 +54,24 @@
 
 				try {
 
-					doCORSRequest({
-						method: 'GET',
-						url: uri,
-						data: ""
-					},
-					function printResult(result) {
+					doCORSRequest(
+						{
+							method: 'GET',
+							url: uri,
+							data: ""
+						},
+						function printResult(result) {
 
-						document.documentElement.innerHTML = "";
+							document.documentElement.innerHTML = "";
 
-						document.write(
-							result.substring(result.indexOf("\n\n") + 2));
-					});
+							document.write(
+								result.substring(result.indexOf("\n\n") + 2));
+						}
+					);
 				}
 
 				catch(error) {
-					console.log(error.message);
+
 				}
 			}
 
