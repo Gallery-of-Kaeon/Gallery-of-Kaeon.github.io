@@ -44,6 +44,9 @@
 
 				let uri =
 					location.href.substring(location.href.indexOf("?") + 6);
+				
+				if(uri.includes("%"))
+					uri = decodeURIComponent(uri);
 
 				try {
 
