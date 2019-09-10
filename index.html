@@ -46,8 +46,7 @@
 						data: ""
 					},
 					function printResult(result) {
-						console.log(result);
-						console.log(typeof result);
+						document.documentElement.innerHTML = result.substring(result.indexof("\n\n") + 2);
 					});
 				}
 
