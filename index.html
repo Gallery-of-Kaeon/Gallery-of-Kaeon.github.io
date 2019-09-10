@@ -40,7 +40,14 @@
 				console.log(uri);
 
 				try {
-					console.log(open(uri));
+					
+					fetch(uri)
+						.then(function(response) {
+							return response.text();
+						})
+						.then(function(text) {
+							console.log(text);
+						});
 				}
 
 				catch(error) {
