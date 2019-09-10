@@ -13,4 +13,4 @@ The URL must follow this format:
 To demonstrate,
 we've uploaded an example site to this repository:
 
-    https://gallery-of-kaeon.github.io?path=resource_link
+    https://gallery-of-kaeon.github.io/?path=https://raw.githubusercontent.com/Gallery-of-Kaeon/Gallery-of-Kaeon.github.io/master/example.html
