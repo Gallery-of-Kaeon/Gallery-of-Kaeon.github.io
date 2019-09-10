@@ -41,8 +41,6 @@
 				console.log(uri);
 
 				try {
-					
-					var data = {};
 
 					doCORSRequest({
 						method: 'GET',
@@ -50,10 +48,8 @@
 						data: ""
 					},
 					function printResult(result) {
-						data = result;
+						console.log(result);
 					});
-
-					console.log(data);
 				}
 
 				catch(error) {
