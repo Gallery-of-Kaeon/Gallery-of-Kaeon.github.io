@@ -42,7 +42,8 @@
 
 			function main() {
 
-				let uri = location.href.substring(location.href.indexOf("?") + 6);
+				let uri =
+					location.href.substring(location.href.indexOf("?") + 6);
 
 				try {
 
@@ -53,8 +54,10 @@
 					},
 					function printResult(result) {
 
-						document.documentElement.innerHTML =
-							result.substring(result.indexOf("\n\n") + 2);
+						document.documentElement.innerHTML = "";
+
+						document.write(
+							result.substring(result.indexOf("\n\n") + 2));
 					});
 				}
 
