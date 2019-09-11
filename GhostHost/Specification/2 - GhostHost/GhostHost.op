@@ -1,0 +1,9 @@
+GhostHost
+
+	Philosophy
+
+		-
+			GhostHost is a shadow host which takes a URI to a text source containing valid HTML and
+			renders said HTML as a new site. The URI parameter specifying the URI to the HTML shall
+			have the alias "path".
+		-
