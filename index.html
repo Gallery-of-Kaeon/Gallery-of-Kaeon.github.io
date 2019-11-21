@@ -1,4 +1,5 @@
-<!-- gallery-of-kaeon.github.io?path=[link] -->
+
+<!-- gallery-of-kaeon.github.io?path=[link]&code=[HTML] -->
 
 <!DOCTYPE html>
 
@@ -6,42 +7,13 @@
 
 	<head>
 
-		<title>
-
-			GhostHost
-			
-		</title>
-
 		<script>
 
 			var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
 
-			function doCORSRequest(options, printResult) {
-
-				var x = new XMLHttpRequest();
-
-				x.open(options.method, cors_api_url + options.url);
-				
-				x.onload = x.onerror = function() {
-						
-					printResult(
-						options.method + ' ' + options.url + '\n' +
-						x.status + ' ' + x.statusText + '\n\n' +
-						(x.responseText || '')
-					);
-				};
-
-				if (/^POST/i.test(options.method)) {
-
-					x.setRequestHeader(
-						'Content-Type',
-						'application/x-www-form-urlencoded');
-				}
-
-				x.send(options.data);
-			}
-
 			function main() {
+
+				document.documentElement.innerHTML = "";
 
 				let vars = {};
 
@@ -51,6 +23,16 @@
 						vars[key] = value;
 					}
 				);
+
+				let code = vars["code"];
+
+				if(code != null) {
+
+					if(code.includes("%"))
+						code = decodeURIComponent(code);
+					
+					document.write(code);
+				}
 
 				let uri = vars["path"];
 
@@ -62,24 +44,26 @@
 
 				try {
 
-					doCORSRequest(
-						{
-							method: 'GET',
-							url: uri,
-							data: ""
-						},
-						function printResult(result) {
+					var request = new XMLHttpRequest();
 
-							document.documentElement.innerHTML = "";
+					request.open("GET", cors_api_url + uri);
 
-							document.write(
-								result.substring(result.indexOf("\n\n") + 2));
-						}
-					);
+					request.onload = request.onerror = function() {
+						document.write(request.responseText || '');
+					};
+
+					if(/^POST/i.test("GET")) {
+
+						request.setRequestHeader(
+							'Content-Type',
+							'application/x-www-form-urlencoded');
+					}
+
+					request.send("");
 				}
 
 				catch(error) {
-
+					
 				}
 			}
 
@@ -88,9 +72,5 @@
 		</script>
 
 	</head>
-
-	<body>
-
-	</body>
 
 </html>
