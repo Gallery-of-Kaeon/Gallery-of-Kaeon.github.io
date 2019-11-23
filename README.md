@@ -26,7 +26,7 @@ and is contingent upon the good will of whoever is hosting said platform.
 Additionally,
 most impose strict limitations on their use.
 
-GhostHost provides the potential anonymous use,
+GhostHost provides the potential for anonymous use,
 and the technique is simple enough to replicate that,
 if GhostHost ever goes down or changes its policies,
 someone else could easily replicate it elsewhere for little to no cost.
