@@ -1,6 +1,6 @@
 <h1 align="center">GhostHost</h1>
 
-GhostHost is an experimental site that allows for free front end hostingfor simple projects.
+GhostHost is a platform that allows for free and anonymous front end hosting for simple projects.
 
 The website can take a URL to a text document as a parameter in its own URL.
 If the text in said resource constitutes valid HTML,
