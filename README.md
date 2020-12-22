@@ -1,6 +1,8 @@
-<h1 align="center">GhostHost</h1>
+<h1 align="center">Kaeon United GhostHost</h1>
 
-GhostHost is a platform that allows for free and anonymous front end hosting for simple projects.
+Kaeon United GhostHost,
+or GhostHost for short,
+is a utility built into the [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United) platform that allows for free and anonymous front end hosting for simple projects.
 
 The website can take a URL to a text document as a parameter in its own URL.
 If the text in said resource constitutes valid HTML,
@@ -8,12 +10,12 @@ the website will render said html as a new site.
 
 The URL must follow this format:
 
-    https://gallery-of-kaeon.github.io?path=resource_link
+    https://gallery-of-kaeon.github.io?html=resource_link
 
 To demonstrate,
 we've uploaded an example site to this repository:
 
-    https://gallery-of-kaeon.github.io/?path=https://raw.githubusercontent.com/Gallery-of-Kaeon/Gallery-of-Kaeon.github.io/master/GhostHost/Example/example.html
+    https://gallery-of-kaeon.github.io/?html=https://raw.githubusercontent.com/Gallery-of-Kaeon/Gallery-of-Kaeon.github.io/master/GhostHost/Example/example.html
 
 GhostHost itself is hosted by Github Pages and uses the CORS Anywhere API as a CORS proxy.
 
