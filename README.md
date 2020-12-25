@@ -7,14 +7,15 @@ is a utility built into the [Kaeon United](https://github.com/Gallery-of-Kaeon/K
 <h2 align="center">Functionality</h2>
 
 Ghosthost,
-which is implemented as a github pages site,
+which is implemented as a Github pages site,
 can take a URL to a text document as a parameter in its own URL.
-If the text in said resource constitutes valid HTML,
-the website will render said html as a new site.
 
 The provided document may contain HTML,
 JavaScript,
 or Kaeon FUSION code.
+
+If HTML is provided,
+the website will render said html as a website.
 
 If JavaScript or Kaeon FUSION is provided,
 it will be executed as a script implictly.
@@ -70,8 +71,10 @@ we've uploaded an example site to this repository, located at the following URL:
 
 <h2 align="center">Why use GhostHost over Github pages, or other similar services?</h2>
 
-Any other platform used for free hosting usually requires the creation of some sort of account,
-and is contingent upon the good will of whoever is hosting said platform.
+Other platforms used for free hosting usually require the creation of some sort of account,
+require an intermediate knowledge of IT related topics,
+making them inaccessible to beginners,
+and are contingent upon the resources and good will of whoever is hosting them.
 Additionally,
 most impose strict limitations on their use.
 
