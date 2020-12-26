@@ -62,7 +62,7 @@ The URL for a Kaeon FUSION project using raw code instead of a URL project must 
 
     https://gallery-of-kaeon.github.io?unitedOPRaw=resource_code
 
-<h2 align="center">Instructions</h2>
+<h2 align="center">Example</h2>
 
 To demonstrate,
 we've uploaded an example site to this repository, located at the following URL:
