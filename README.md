@@ -2,7 +2,7 @@
 
 Kaeon United GhostHost,
 or GhostHost for short,
-is a utility built into the [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United) platform that allows for free and anonymous front end hosting for simple projects.
+is a utility built into the [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United) platform that allows for free and anonymous front end hosting for serverless apps.
 
 <h2 align="center">Functionality</h2>
 
