@@ -418,19 +418,12 @@ function executeOP(code) {
 	require.ONESuite.process(code);
 }
 
-function setBody() {
-
-	if(document.body == null)
-		return;
-
-	document.body.style.position = "absolute";
-}
-
 function executeHTML(code) {
 
 	document.documentElement.innerHTML = code;
 
-	setBody();
+	if(document.body != null)
+		document.body.style.position = "absolute";
 
 	let scripts = document.querySelectorAll("script");
 
@@ -445,7 +438,8 @@ function executeHTML(code) {
 
 function executeCDN() {
 
-	setBody();
+	if(document.body != null)
+		document.body.style.position = "absolute";
 
 	let args = getURLArguments();
 
