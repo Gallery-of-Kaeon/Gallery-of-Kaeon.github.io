@@ -418,12 +418,25 @@ function executeOP(code) {
 	require.ONESuite.process(code);
 }
 
+function setBody() {
+
+	if(document.body == null)
+		return;
+
+	document.body.style.position = "absolute";
+	
+	document.body.style.left = "0%";
+	document.body.style.top = "0%";
+	
+	document.body.style.width = "100%";
+	document.body.style.height = "100%";
+}
+
 function executeHTML(code) {
 
 	document.documentElement.innerHTML = code;
 
-	if(document.body != null)
-		document.body.style.position = "absolute";
+	setBody();
 
 	let scripts = document.querySelectorAll("script");
 
@@ -438,8 +451,7 @@ function executeHTML(code) {
 
 function executeCDN() {
 
-	if(document.body != null)
-		document.body.style.position = "absolute";
+	setBody();
 
 	let args = getURLArguments();
 
