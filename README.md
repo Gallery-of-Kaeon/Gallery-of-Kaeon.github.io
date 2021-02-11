@@ -33,8 +33,8 @@ it is also possible to specify raw code in the URL instead of a link.
 Accessing the site with no URL arguments shall render the home page for [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United).
 
 It should be noted that GhostHost relies on a public CORS proxy,
-the [CORS Anywhere](https://cors-anywhere.herokuapp.com/) proxy,
-which occasionally goes down.
+a clone of the [CORS Anywhere](https://cors-anywhere.herokuapp.com/) proxy hosted on Heroku,
+which may go down on rare occasions.
 
 <h2 align="center">Instructions</h2>
 
