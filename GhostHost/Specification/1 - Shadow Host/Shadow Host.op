@@ -1,9 +1,0 @@
-Shadow Host
-
-	Philosophy
-
-		-
-			A shadow host is a website that takes the URIs of existing resources or the literal
-			content of resources as arguments through its own URI and renders said resources as a
-			new website.
-		-
