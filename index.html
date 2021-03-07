@@ -105,26 +105,14 @@ function makeOnlineRequest(path, cors) {
 		if(cors)
 			path = settings.cors + path;
 		
-		let rawFile = new XMLHttpRequest();
+		let xhr = new XMLHttpRequest();
 
-		rawFile.open("GET", path, false);
+		xhr.open("GET", path, false);
+		xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
 
-		rawFile.setRequestHeader("Origin", "https://www.abc_" + Math.random() + ".com");
+		xhr.send(null);
 
-		let allText = "";
-
-		rawFile.onreadystatechange = function() {
-
-			if(rawFile.readyState === 4) {
-
-				if(rawFile.status === 200 || rawFile.status == 0)
-					allText = rawFile.responseText;
-			}
-		}
-
-		rawFile.send(null);
-
-		return allText;
+		return xhr.responseText;
 	}
 
 	catch(error) {
