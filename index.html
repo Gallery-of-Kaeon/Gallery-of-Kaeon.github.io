@@ -279,7 +279,7 @@ function executeScript() {
 		let lowerPath = path.toLowerCase().split("-").join("").split(" ").join("");
 
 		if(lowerPath.endsWith("kaeonunited") || lowerPath.endsWith("kaeonunited.js"))
-			return require.kaeonUtilities;
+			return unitedRequire(moduleDependencies.kaeonUtilities);
 	
 		require.cache = require.cache ? require.cache : { };
 	
@@ -367,14 +367,6 @@ function executeScript() {
 	
 	try {
 		require.ONESuite = require(moduleDependencies.ONESuite);
-	}
-	
-	catch(error) {
-		
-	}
-	
-	try {
-		require.kaeonUtilities = require(moduleDependencies.kaeonUtilities);
 	}
 	
 	catch(error) {
