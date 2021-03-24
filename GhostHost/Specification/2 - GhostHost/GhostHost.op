@@ -1,0 +1,15 @@
+GhostHost
+
+	Philosophy
+
+		-
+			GhostHost is a shadow host which may take a URI to a text source containing valid HTML
+			using the URI parameter "path", as well as an HTML string using the URI parameter
+			"code".
+
+			If the path parameter is provided, the HTML code in the file located at the specified
+			address shall be rendered to the site, and if the code parameter is provided, the
+			provided HTML code shall be rendered to the site.
+
+			If neither URI parameter is provided, the site shall render as blank.
+		-
