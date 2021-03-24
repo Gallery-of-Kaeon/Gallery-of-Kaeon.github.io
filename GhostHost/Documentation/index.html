@@ -86,13 +86,13 @@
 			
 			<pre><code>	var puppeteer = require('puppeteer');
 			
-		var browser = await puppeteer.launch();
-		var page = await browser.newPage();
-			
-		await page.goto('https://github.com/Gallery-of-Kaeon/Kaeon-United');
-		await page.screenshot({path: 'screenshot.png'});
+	var browser = await puppeteer.launch();
+	var page = await browser.newPage();
 		
-		await browser.close();</code></pre>
+	await page.goto('https://github.com/Gallery-of-Kaeon/Kaeon-United');
+	await page.screenshot({path: 'screenshot.png'});
+	
+	await browser.close();</code></pre>
 			
 			<p>This code is a slightly modified version of the sample code provided on the <a href="https://www.npmjs.com/package/puppeteer">puppeteer</a> npm page.</p>
 			
