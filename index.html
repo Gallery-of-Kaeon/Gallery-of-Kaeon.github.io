@@ -325,6 +325,22 @@ function executeScript() {
 			if(require.ONESuite != null)
 				allText = require.ONESuite.preprocess(allText);
 
+			let isJSON = false;
+
+			try {
+
+				JSON.parse(allText);
+
+				isJSON = true;
+			}
+
+			catch(error) {
+
+			}
+
+			if(isJSON)
+				allText = "module.exports=" + allText;
+
 			if(!options.global) {
 		
 				let moduleFunction = new Function(
