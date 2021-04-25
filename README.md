@@ -6,23 +6,20 @@ is a utility built into the [Kaeon United](https://github.com/Gallery-of-Kaeon/K
 
 <h2 align="center">Functionality</h2>
 
-Ghosthost,
-which is implemented as a Github pages site,
-can take a URL to a text document as a parameter in its own URL.
+GhostHost can take a URL to an online text document as a parameter in its own URL.
 
 The provided document may contain HTML,
 JavaScript,
 or Kaeon FUSION code.
 
 If HTML is provided,
-the website will render said html as a website.
+the website shall render said html as a website.
 
 If JavaScript or Kaeon FUSION is provided,
-it will be executed as a script implictly.
+it shall be executed as a script implictly.
 
-Additionally,
-if JavaScript is provided,
-it shall be interpreted as United JavaScript,
+If JavaScript is provided,
+it shall be interpreted as [United JavaScript](https://github.com/Gallery-of-Kaeon/Kaeon-United#united-javascript),
 and shall thus have access to the CommonJS require function,
 through which it may import modules stored online via their URLs.
 
@@ -30,11 +27,9 @@ Additionally,
 if desired,
 it is also possible to specify raw code in the URL instead of a link.
 
-Accessing the site with no URL arguments shall render the home page for [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United).
+Resources accessed by GhostHost through its URL and through the United JavaScript require function shall be run through a CORS proxy to allow for cross origin access to them.
 
-It should be noted that GhostHost relies on a public CORS proxy,
-a clone of the [CORS Anywhere](https://cors-anywhere.herokuapp.com/) proxy hosted on Heroku,
-which may go down on rare occasions.
+Accessing the site with no URL arguments shall render the home page for [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United).
 
 <h2 align="center">Instructions</h2>
 
@@ -78,7 +73,13 @@ and are contingent upon the resources and good will of whoever is hosting them.
 Additionally,
 most impose strict limitations on their use.
 
-GhostHost provides the potential for anonymous use,
+GhostHost provides the potential for unlimited and anonymous use,
 and the technique is simple enough to replicate that,
 if GhostHost or other hosting services ever go down or change their policies,
 someone else could easily replicate it elsewhere for little to no cost.
+
+<h2 align="center">Disclaimer</h2>
+
+It should be noted that GhostHost relies on a public CORS proxy,
+a clone of the [CORS Anywhere](https://cors-anywhere.herokuapp.com/) proxy hosted on Heroku,
+which may go down on rare occasions.
