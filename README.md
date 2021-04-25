@@ -29,7 +29,8 @@ it is also possible to specify raw code in the URL instead of a link.
 
 Resources accessed by GhostHost through its URL and through the United JavaScript require function shall be run through a CORS proxy to allow for cross origin access to them.
 
-Accessing the site with no URL arguments shall render the home page for [Kaeon United](https://github.com/Gallery-of-Kaeon/Kaeon-United).
+Accessing the site with no URL arguments shall render the home page for Kaeon United,
+as seen [here](https://gallery-of-kaeon.github.io).
 
 <h2 align="center">Instructions</h2>
 
